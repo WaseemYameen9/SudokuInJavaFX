@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="346.0" prefWidth="504.0" style="-fx-background-color: #00539CFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sudokugame.GamePageController">
+   <children>
+      <Button fx:id="newGameBtn" layoutX="403.0" layoutY="198.0" mnemonicParsing="false" onAction="#NewGameButton" prefHeight="41.0" prefWidth="84.0" style="-fx-background-color: #101820FF;" text="New Game" textFill="#d4b3a3">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="closeBtn" layoutX="403.0" layoutY="260.0" mnemonicParsing="false" onAction="#closeBtnClick" prefHeight="41.0" prefWidth="84.0" style="-fx-background-color: #101820FF;" text="Close" textFill="#d4b3a3">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </Button>
+      <TextField layoutX="403.0" layoutY="64.0" prefHeight="34.0" prefWidth="84.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt11" layoutX="19.0" layoutY="47.0" onAction="#InputMethodTextChangeEvent" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt12" layoutX="50.0" layoutY="47.0" onAction="#InputMethodTextChangeEvent" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt13" layoutX="81.0" layoutY="48.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt21" layoutX="19.0" layoutY="75.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt22" layoutX="50.0" layoutY="75.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt23" layoutX="81.0" layoutY="76.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt31" layoutX="19.0" layoutY="103.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt32" layoutX="50.0" layoutY="103.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt33" layoutX="81.0" layoutY="104.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt14" layoutX="116.0" layoutY="48.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt15" layoutX="147.0" layoutY="48.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt16" layoutX="178.0" layoutY="49.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt24" layoutX="116.0" layoutY="76.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt25" layoutX="147.0" layoutY="76.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt26" layoutX="178.0" layoutY="77.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt34" layoutX="116.0" layoutY="104.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt35" layoutX="147.0" layoutY="104.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt36" layoutX="178.0" layoutY="105.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt17" layoutX="213.0" layoutY="48.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt18" layoutX="244.0" layoutY="48.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt19" layoutX="275.0" layoutY="49.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt27" layoutX="213.0" layoutY="76.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt28" layoutX="244.0" layoutY="76.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt29" layoutX="275.0" layoutY="77.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt37" layoutX="213.0" layoutY="104.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt38" layoutX="244.0" layoutY="104.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt39" layoutX="275.0" layoutY="105.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt41" layoutX="21.0" layoutY="136.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt42" layoutX="52.0" layoutY="136.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt43" layoutX="83.0" layoutY="137.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt51" layoutX="21.0" layoutY="164.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt52" layoutX="52.0" layoutY="164.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt53" layoutX="83.0" layoutY="165.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt61" layoutX="21.0" layoutY="192.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt62" layoutX="52.0" layoutY="192.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt63" layoutX="83.0" layoutY="193.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt44" layoutX="118.0" layoutY="137.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt45" layoutX="149.0" layoutY="137.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt46" layoutX="180.0" layoutY="138.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt54" layoutX="118.0" layoutY="165.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt55" layoutX="149.0" layoutY="165.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt56" layoutX="180.0" layoutY="166.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt64" layoutX="118.0" layoutY="193.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt65" layoutX="149.0" layoutY="193.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt66" layoutX="180.0" layoutY="194.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt47" layoutX="215.0" layoutY="137.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt48" layoutX="246.0" layoutY="137.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt49" layoutX="277.0" layoutY="138.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt57" layoutX="215.0" layoutY="165.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt58" layoutX="246.0" layoutY="165.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt59" layoutX="277.0" layoutY="166.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt67" layoutX="215.0" layoutY="193.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt68" layoutX="246.0" layoutY="193.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt69" layoutX="277.0" layoutY="194.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt71" layoutX="23.0" layoutY="228.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt72" layoutX="54.0" layoutY="228.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt73" layoutX="85.0" layoutY="229.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt81" layoutX="23.0" layoutY="256.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt82" layoutX="54.0" layoutY="256.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt83" layoutX="85.0" layoutY="257.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt91" layoutX="23.0" layoutY="284.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt92" layoutX="54.0" layoutY="284.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt93" layoutX="85.0" layoutY="285.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt74" layoutX="120.0" layoutY="229.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt75" layoutX="151.0" layoutY="229.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt76" layoutX="182.0" layoutY="230.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt84" layoutX="120.0" layoutY="257.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt85" layoutX="151.0" layoutY="257.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt86" layoutX="182.0" layoutY="258.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt94" layoutX="120.0" layoutY="285.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt95" layoutX="151.0" layoutY="285.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt96" layoutX="182.0" layoutY="286.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt77" layoutX="217.0" layoutY="229.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt78" layoutX="248.0" layoutY="229.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt79" layoutX="279.0" layoutY="230.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt87" layoutX="217.0" layoutY="257.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt88" layoutX="248.0" layoutY="257.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt89" layoutX="279.0" layoutY="258.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt97" layoutX="217.0" layoutY="285.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt98" layoutX="248.0" layoutY="285.0" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt99" layoutX="279.0" layoutY="286.0" onAction="#InputMethodTextChangeEvent" onKeyTyped="#InputMethodTextChangeEvent" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
