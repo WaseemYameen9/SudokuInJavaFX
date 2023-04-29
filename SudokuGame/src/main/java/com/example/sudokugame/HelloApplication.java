@@ -22,7 +22,7 @@ public class HelloApplication extends Application {
     public static void main(String[] args) {
 
         launch();
-        GamePageController.linktextboxescells(B);
+       // GamePageController.linktextboxescells(B);
     }
 
 

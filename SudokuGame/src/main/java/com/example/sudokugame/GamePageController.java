@@ -18,6 +18,27 @@ import java.io.IOException;
 public class GamePageController {
     @FXML
     public Button closeBtn;
+    @FXML
+    public TextField txt11;
+
+    @FXML
+    public TextField txt22;
+
+    @FXML
+    public TextField txt33;
+
+    @FXML
+    public TextField txt44;
+    @FXML
+    public TextField txt55;
+    @FXML
+    public TextField txt66;
+    @FXML
+    public  TextField txt77;
+    @FXML
+    public TextField txt88;
+    @FXML
+    public TextField txt99;
 
 
     @FXML
@@ -26,6 +47,11 @@ public class GamePageController {
         Platform.exit();
     }
 
+    //@FXML
+    //public void initialize() {
+    //    Board board = new Board();
+    //    InitilizedatainTextFields();
+    //}
     @FXML
     public void NewGameButton(ActionEvent event) throws IOException
     {
@@ -36,28 +62,29 @@ public class GamePageController {
         window.show();
     }
 
-    public static void linktextboxescells(Board B)
+    @FXML
+    public static void InitilizedatainTextFields()
     {
-        for(int i=1;i<10;i++)
-        {
-    //        B.setCellValue(txt2[i],txt2[i].Text);
-      //      B.setCellValue(txt2[i],txt2[i].Text);
-      //      B.setCellValue(txt2[i],txt2[i].Text);
-      //      B.setCellValue(txt2[i],txt2[i].Text);
-      //      B.setCellValue(txt2[i],txt2[i].Text);
-      //      B.setCellValue(txt2[i],txt2[i].Text);
-      //      B.setCellValue(txt2[i],txt2[i].Text);
-      //      B.setCellValue(txt2[i],txt2[i].Text);
-      //      B.setCellValue(txt2[i],txt2[i].Text);
-       //     B.setCellValue(txt2[i],txt2[i].Text);
-            // whenever textbox value is clicked it sets its value
 
-        }
+
     }
 
     public void InputMethodTextChangeEvent(KeyEvent event) {
         TextField textField = (TextField) event.getSource();
         String textFieldName = textField.getId();
         System.out.println("Event fired from " + textFieldName);
+    }
+
+    public void InitilizedatainTextFields(ActionEvent actionEvent) {
+        txt11.setText("1");
+        txt22.setText("2");
+        txt33.setText("3");
+        txt44.setText("4");
+        txt55.setText("5");
+        txt66.setText("6");
+        txt77.setText("7");
+        txt88.setText("8");
+        txt99.setText("9");
+
     }
 }
