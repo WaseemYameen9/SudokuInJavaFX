@@ -83,7 +83,16 @@ public class GamePageController {
             alert.showAndWait();
             textField.clear();
         }
-        System.out.println("Event fired from " + textFieldName);
+        else {
+            int intValue = Integer.parseInt(value);
+            if(HelloApplication.SetValue(textFieldName,intValue)){
+                textField.setStyle("-fx-text-fill: blue;");
+            }
+            else{
+                textField.setStyle("-fx-text-fill: red;");
+
+            }
+        }
     }
 
     public void InitilizedatainTextFields(ActionEvent actionEvent) {

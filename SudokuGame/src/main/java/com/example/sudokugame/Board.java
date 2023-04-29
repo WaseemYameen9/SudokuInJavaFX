@@ -18,7 +18,7 @@ public class Board {
         }
     }
 
-    public void setCellValue(String textBoxName, int value) {
+    public int[] setCellValue(String textBoxName, int value) {
         // Get the row and column from the text box name
         //(3,4) where 3 is the starting index and 4 is ending index of the string
         int row = Integer.parseInt(textBoxName.substring(3, 4)) - 1;
@@ -26,7 +26,55 @@ public class Board {
 
         // Set the value of the corresponding Cell object
         BoardCells[row][col].setValue(value);
+        return new int[]{row, col};
     }
+
+    public boolean CheckRows(int row,int column)
+    {
+        int value = BoardCells[row][column].getValue();
+        for (int i=0;i<9;i++)
+        {
+            if(column == i)
+            {
+                continue;
+            }
+            else
+            {
+                if(BoardCells[row][i].getValue() == value)
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+
+    }
+    public boolean CheckColumns(int row, int column)
+    {
+        int value = BoardCells[row][column].getValue();
+        for (int i=0;i<9;i++)
+        {
+            if(row == i)
+            {
+                continue;
+            }
+            else
+            {
+                if(BoardCells[i][column].getValue() == value)
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+
+    }
+
+    public void ChecksubGrid()
+    {
+
+    }
+
 
 
 }
