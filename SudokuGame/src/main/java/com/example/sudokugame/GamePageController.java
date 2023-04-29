@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.InputMethodEvent;
@@ -72,6 +73,16 @@ public class GamePageController {
     public void InputMethodTextChangeEvent(KeyEvent event) {
         TextField textField = (TextField) event.getSource();
         String textFieldName = textField.getId();
+        String value = textField.getText();
+        String allowedValues = "123456789";
+        if (!allowedValues.contains(value) || value.length()>1) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Alert");
+            alert.setHeaderText(null);
+            alert.setContentText("You can't enter alphabets, multiple values and value greate then 9 and less then 1");
+            alert.showAndWait();
+            textField.clear();
+        }
         System.out.println("Event fired from " + textFieldName);
     }
 
