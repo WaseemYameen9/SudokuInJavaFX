@@ -17,8 +17,14 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class GamePageController {
+    public int score=0;
+    public int lives=3;
     @FXML
     public Button closeBtn;
+    @FXML
+    public TextField scoreTxt;
+    @FXML
+    public TextField livesTxt;
     @FXML
     public TextField txt11;
 
@@ -87,24 +93,48 @@ public class GamePageController {
             int intValue = Integer.parseInt(value);
             if(HelloApplication.SetValue(textFieldName,intValue)){
                 textField.setStyle("-fx-text-fill: blue;");
+                score = score + 10;
+                scoreTxt.setText(String.valueOf(score));
             }
             else{
                 textField.setStyle("-fx-text-fill: red;");
-
+                lives = lives - 1;
+                livesTxt.setText(String.valueOf(lives));
+                if(lives == 0)
+                {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Game Over");
+                    alert.setHeaderText("Game Over");
+                    alert.setContentText("Your score is "+ scoreTxt.getText());
+                    alert.showAndWait();
+                    Platform.exit();
+                }
             }
         }
     }
 
     public void InitilizedatainTextFields(ActionEvent actionEvent) {
         txt11.setText("1");
+        HelloApplication.SetValue("txt11",1);
         txt22.setText("2");
+        HelloApplication.SetValue("txt22",2);
         txt33.setText("3");
+        HelloApplication.SetValue("txt33",3);
         txt44.setText("4");
+        HelloApplication.SetValue("txt44",4);
         txt55.setText("5");
+        HelloApplication.SetValue("txt55",5);
         txt66.setText("6");
+        HelloApplication.SetValue("txt66",6);
         txt77.setText("7");
+        HelloApplication.SetValue("txt77",7);
         txt88.setText("8");
+        HelloApplication.SetValue("txt88",8);
         txt99.setText("9");
+        HelloApplication.SetValue("txt99",9);
+
+        livesTxt.setText("3");
+        scoreTxt.setText("0");
 
     }
 }

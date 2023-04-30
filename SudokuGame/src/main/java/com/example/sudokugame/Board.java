@@ -29,45 +29,24 @@ public class Board {
         return new int[]{row, col};
     }
 
-    public boolean CheckRows(int row,int column)
-    {
+    public boolean CheckRows(int row, int column) {
         int value = BoardCells[row][column].getValue();
-        for (int i=0;i<9;i++)
-        {
-            if(column == i)
-            {
-                continue;
-            }
-            else
-            {
-                if(BoardCells[row][i].getValue() == value)
-                {
-                    return false;
-                }
+        for (int i = 0; i < 9; i++) {
+            if (column != i && BoardCells[row][i].getValue() == value) {
+                return false;
             }
         }
         return true;
-
     }
-    public boolean CheckColumns(int row, int column)
-    {
+
+    public boolean CheckColumns(int row, int column) {
         int value = BoardCells[row][column].getValue();
-        for (int i=0;i<9;i++)
-        {
-            if(row == i)
-            {
-                continue;
-            }
-            else
-            {
-                if(BoardCells[i][column].getValue() == value)
-                {
-                    return false;
-                }
+        for (int i = 0; i < 9; i++) {
+            if (row != i && BoardCells[i][column].getValue() == value) {
+                return false;
             }
         }
         return true;
-
     }
 
     public void ChecksubGrid()
