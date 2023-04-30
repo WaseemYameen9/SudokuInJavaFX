@@ -30,7 +30,7 @@ public class HelloApplication extends Application {
    public static boolean SetValue(String TextFieldName, int Value)
    {
        int[] value = B.setCellValue(TextFieldName, Value);
-       if(B.CheckRows(value[0],value[1]) && B.CheckColumns(value[0],value[1]))
+       if(B.CheckRows(value[0],value[1]) && B.CheckColumns(value[0],value[1]) && B.ChecksubGrid(value[0],value[1]))
        {
             return true;
        }

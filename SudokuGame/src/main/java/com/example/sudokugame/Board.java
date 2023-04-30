@@ -49,10 +49,24 @@ public class Board {
         return true;
     }
 
-    public void ChecksubGrid()
-    {
+    public boolean ChecksubGrid(int row, int column) {
+        int value = BoardCells[row][column].getValue();
 
+        // Think the 9-by-9 sudoku grid as 3-by-3 grid which further has 3-by-3 grid each
+        int subGridRowNumber = row / 3;
+        int subGridColumnNumber = column / 3;
+
+        // Iterations to check wether the value exists in it's 3-by-3 subgrid
+        for (int i = subGridRowNumber * 3; i < subGridRowNumber * 3 + 3; i++) {
+            for (int j = subGridColumnNumber * 3; j < subGridColumnNumber * 3 + 3; j++) {
+                if (i != row && j != column && BoardCells[i][j].getValue() == value) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
+
 
 
 

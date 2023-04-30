@@ -26,27 +26,80 @@ public class GamePageController {
     @FXML
     public TextField livesTxt;
     @FXML
-    public TextField txt11;
+    public TextField txt13;
 
+    @FXML
+    public TextField txt14;
+
+    @FXML
+    public TextField txt18;
+
+    @FXML
+    public TextField txt19;
     @FXML
     public TextField txt22;
+    @FXML
+    public TextField txt23;
+    @FXML
+    public  TextField txt25;
+    @FXML
+    public TextField txt35;
+    @FXML
+    public TextField txt36;
 
     @FXML
-    public TextField txt33;
+    public TextField txt37;
 
     @FXML
-    public TextField txt44;
+    public TextField txt41;
+
     @FXML
-    public TextField txt55;
+    public TextField txt46;
+
+    @FXML
+    public TextField txt49;
+
+    @FXML
+    public TextField txt91;
+
+    @FXML
+    public TextField txt94;
+
+    @FXML
+    public TextField txt98;
+
+    @FXML
+    public TextField txt81;
+
+    @FXML
+    public TextField txt82;
+
+    @FXML
+    public TextField txt89;
+
+    @FXML
+    public TextField txt75;
+
+    @FXML
+    public TextField txt76;
+
+    @FXML
+    public TextField txt77;
+
+    @FXML
+    public TextField txt52;
+
+    @FXML
+    public TextField txt58;
+
+    @FXML
+    public TextField txt64;
+
     @FXML
     public TextField txt66;
-    @FXML
-    public  TextField txt77;
-    @FXML
-    public TextField txt88;
-    @FXML
-    public TextField txt99;
 
+    @FXML
+    public TextField txt67;
 
     @FXML
     public void closeBtnClick()
@@ -114,24 +167,62 @@ public class GamePageController {
     }
 
     public void InitilizedatainTextFields(ActionEvent actionEvent) {
-        txt11.setText("1");
-        HelloApplication.SetValue("txt11",1);
-        txt22.setText("2");
-        HelloApplication.SetValue("txt22",2);
-        txt33.setText("3");
-        HelloApplication.SetValue("txt33",3);
-        txt44.setText("4");
-        HelloApplication.SetValue("txt44",4);
-        txt55.setText("5");
-        HelloApplication.SetValue("txt55",5);
-        txt66.setText("6");
-        HelloApplication.SetValue("txt66",6);
-        txt77.setText("7");
-        HelloApplication.SetValue("txt77",7);
-        txt88.setText("8");
-        HelloApplication.SetValue("txt88",8);
-        txt99.setText("9");
-        HelloApplication.SetValue("txt99",9);
+        txt13.setText("5");
+        HelloApplication.SetValue("txt13",5);
+        txt14.setText("7");
+        HelloApplication.SetValue("txt14",7);
+        txt18.setText("9");
+        HelloApplication.SetValue("txt18",9);
+        txt19.setText("8");
+        HelloApplication.SetValue("txt19",8);
+        txt22.setText("1");
+        HelloApplication.SetValue("txt22",1);
+        txt23.setText("6");
+        HelloApplication.SetValue("txt23",6);
+        txt25.setText("9");
+        HelloApplication.SetValue("txt25",9);
+        txt35.setText("8");
+        HelloApplication.SetValue("txt35",8);
+        txt36.setText("3");
+        HelloApplication.SetValue("txt36",3);
+        txt37.setText("5");
+        HelloApplication.SetValue("txt37",5);
+        txt41.setText("7");
+        HelloApplication.SetValue("txt41",7);
+        txt46.setText("9");
+        HelloApplication.SetValue("txt46",9);
+        txt49.setText("3");
+        HelloApplication.SetValue("txt49",3);
+        txt91.setText("2");
+        HelloApplication.SetValue("txt91",2);
+        txt94.setText("8");
+        HelloApplication.SetValue("txt94",8);
+        txt98.setText("7");
+        HelloApplication.SetValue("txt98",7);
+        txt81.setText("3");
+        HelloApplication.SetValue("txt81",3);
+        txt82.setText("5");
+        HelloApplication.SetValue("txt82",5);
+        txt89.setText("6");
+        HelloApplication.SetValue("txt89",6);
+        txt75.setText("1");
+        HelloApplication.SetValue("txt75",1);
+        txt76.setText("2");
+        HelloApplication.SetValue("txt76",2);
+        txt77.setText("4");
+        HelloApplication.SetValue("txt77",4);
+        txt52.setText("6");
+        HelloApplication.SetValue("txt52",6);
+        txt58.setText("1");
+        HelloApplication.SetValue("txt58",1);
+        txt64.setText("5");
+        HelloApplication.SetValue("txt64",5);
+        txt66.setText("4");
+        HelloApplication.SetValue("txt66",4);
+        txt67.setText("2");
+        HelloApplication.SetValue("txt67",2);
+
+
 
         livesTxt.setText("3");
         scoreTxt.setText("0");
