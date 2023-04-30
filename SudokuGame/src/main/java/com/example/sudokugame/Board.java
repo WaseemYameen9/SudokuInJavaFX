@@ -1,6 +1,7 @@
 package com.example.sudokugame;
 
 public class Board {
+    // Cells in the main Sudoku game board
     private Cell[][] BoardCells;
 
     public Board()
@@ -9,15 +10,17 @@ public class Board {
         SETBoardCellsRowsandColumns();
     }
 
+    // Initilaize the Cell values with default value -1 and set their rows and columns
     public void SETBoardCellsRowsandColumns()
     {
         for (int row = 0; row < 9; row++) {
             for (int col = 0; col < 9; col++) {
-                BoardCells[row][col] = new Cell(row, col, 0);
+                BoardCells[row][col] = new Cell(row, col, -1);
             }
         }
     }
 
+    // This function will set the cell value and return the rows and columns in which the value added
     public int[] setCellValue(String textBoxName, int value) {
         // Get the row and column from the text box name
         //(3,4) where 3 is the starting index and 4 is ending index of the string
@@ -29,6 +32,7 @@ public class Board {
         return new int[]{row, col};
     }
 
+    //  Row Condition Check
     public boolean CheckRows(int row, int column) {
         int value = BoardCells[row][column].getValue();
         for (int i = 0; i < 9; i++) {
@@ -39,6 +43,7 @@ public class Board {
         return true;
     }
 
+    // Column Condition Check
     public boolean CheckColumns(int row, int column) {
         int value = BoardCells[row][column].getValue();
         for (int i = 0; i < 9; i++) {
@@ -49,6 +54,7 @@ public class Board {
         return true;
     }
 
+    // Sub Grid Condition Check
     public boolean ChecksubGrid(int row, int column) {
         int value = BoardCells[row][column].getValue();
 
@@ -66,7 +72,22 @@ public class Board {
         }
         return true;
     }
+    // Winning Condition Check
+    public boolean checkWinningCondition()
+    {
+        for(int i=0;i<9;i++)
+        {
+            for(int j = 0; j<9 ; j++)
+            {
+                if(BoardCells[i][j].getValue() == -1)
+                {
+                    return false;
+                }
+            }
 
+        }
+        return true;
+    }
 
 
 

@@ -41,7 +41,14 @@ public class HelloApplication extends Application {
 
    }
 
-
+    public static boolean checkWinning()
+    {
+        if(B.checkWinningCondition())
+        {
+            return true;
+        }
+        return false;
+    }
 
 
 }

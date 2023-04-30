@@ -107,11 +107,7 @@ public class GamePageController {
         Platform.exit();
     }
 
-    //@FXML
-    //public void initialize() {
-    //    Board board = new Board();
-    //    InitilizedatainTextFields();
-    //}
+
     @FXML
     public void NewGameButton(ActionEvent event) throws IOException
     {
@@ -122,18 +118,15 @@ public class GamePageController {
         window.show();
     }
 
-    @FXML
-    public static void InitilizedatainTextFields()
-    {
 
-
-    }
-
+    // This function will be called whenever text in textboxe changes
     public void InputMethodTextChangeEvent(KeyEvent event) {
         TextField textField = (TextField) event.getSource();
         String textFieldName = textField.getId();
         String value = textField.getText();
         String allowedValues = "123456789";
+
+        // If the value in text box is not valid this if condition will run
         if (!allowedValues.contains(value) || value.length()>1) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Alert");
@@ -142,13 +135,27 @@ public class GamePageController {
             alert.showAndWait();
             textField.clear();
         }
+        // If the value is valid then else condition will run
         else {
             int intValue = Integer.parseInt(value);
+
+            // If the entered Value is valid
+
             if(HelloApplication.SetValue(textFieldName,intValue)){
                 textField.setStyle("-fx-text-fill: blue;");
                 score = score + 10;
                 scoreTxt.setText(String.valueOf(score));
+                if(HelloApplication.checkWinning())
+                {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Result");
+                    alert.setHeaderText("You Won");
+                    alert.setContentText("Your score is "+ scoreTxt.getText());
+                    alert.showAndWait();
+                    Platform.exit();
+                }
             }
+            // If the entered value is Invalid
             else{
                 textField.setStyle("-fx-text-fill: red;");
                 lives = lives - 1;
@@ -166,6 +173,7 @@ public class GamePageController {
         }
     }
 
+    // This function will be called when click on Initialize Button. Its populates the maze
     public void InitilizedatainTextFields(ActionEvent actionEvent) {
         txt13.setText("5");
         HelloApplication.SetValue("txt13",5);
