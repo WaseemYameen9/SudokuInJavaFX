@@ -1,9 +1,13 @@
 package com.example.sudokugame;
 
+
+// Main Board Class having 81 Cells as it contains a 2D array of Cell type
 public class Board {
     // Cells in the main Sudoku game board
     private Cell[][] BoardCells;
 
+
+    // Constructor that initializes the Board Cells
     public Board()
     {
         BoardCells = new Cell[9][9];
@@ -20,7 +24,8 @@ public class Board {
         }
     }
 
-    // This function will set the cell value and return the rows and columns in which the value added
+    // This function will get the textbox name and value on that textbox
+    // and set the cell value and return the rows and columns in which the value added
     public int[] setCellValue(String textBoxName, int value) {
         // Get the row and column from the text box name
         //(3,4) where 3 is the starting index and 4 is ending index of the string
@@ -32,7 +37,8 @@ public class Board {
         return new int[]{row, col};
     }
 
-    //  Row Condition Check
+    //  Row Condition Check : It will check that the value in given row and column  does not exist in that row
+    // If the value is repeating in row it will return false
     public boolean CheckRows(int row, int column) {
         int value = BoardCells[row][column].getValue();
         for (int i = 0; i < 9; i++) {
@@ -43,7 +49,7 @@ public class Board {
         return true;
     }
 
-    // Column Condition Check
+    // Column Condition Check : Same as row condition but it checks the columns values
     public boolean CheckColumns(int row, int column) {
         int value = BoardCells[row][column].getValue();
         for (int i = 0; i < 9; i++) {
@@ -54,13 +60,14 @@ public class Board {
         return true;
     }
 
-    // Sub Grid Condition Check
+    // Sub Grid Condition Check : This function checks
+    // that the value in given row and column is not repeating in sub-grid
     public boolean ChecksubGrid(int row, int column) {
         int value = BoardCells[row][column].getValue();
 
         // Think the 9-by-9 sudoku grid as 3-by-3 grid which further has 3-by-3 grid each
-        int subGridRowNumber = row / 3;
-        int subGridColumnNumber = column / 3;
+        int subGridRowNumber = row / 3;     // sub-grid rowNumber
+        int subGridColumnNumber = column / 3;   // sub-grid ColumnNumber
 
         // Iterations to check wether the value exists in it's 3-by-3 subgrid
         for (int i = subGridRowNumber * 3; i < subGridRowNumber * 3 + 3; i++) {
@@ -72,7 +79,8 @@ public class Board {
         }
         return true;
     }
-    // Winning Condition Check
+    // Winning Condition Check : As we initialize the cells with -1 value. We check that if there is no -1
+    // Value is left it means the user has completed the game and won
     public boolean checkWinningCondition()
     {
         for(int i=0;i<9;i++)

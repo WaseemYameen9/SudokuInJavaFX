@@ -16,9 +16,15 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+
+// This is the controller class of the main page
 public class GamePageController {
+
+    //Initializing Score and Lives
     public int score=0;
     public int lives=3;
+
+    // Initializing buttons and textboxes to be used that are in UI.
     @FXML
     public Button closeBtn;
     @FXML
@@ -101,6 +107,8 @@ public class GamePageController {
     @FXML
     public TextField txt67;
 
+
+    // This function is fired whenever Close Button is Clicked. This Function closes the game
     @FXML
     public void closeBtnClick()
     {
@@ -108,6 +116,8 @@ public class GamePageController {
     }
 
 
+    // This function re-starts the game and this function is fired whenever new game button
+    // is clicked.
     @FXML
     public void NewGameButton(ActionEvent event) throws IOException
     {
@@ -119,14 +129,14 @@ public class GamePageController {
     }
 
 
-    // This function will be called whenever text in textboxe changes
+    // This function will be called whenever text in textbox changes
     public void InputMethodTextChangeEvent(KeyEvent event) {
         TextField textField = (TextField) event.getSource();
         String textFieldName = textField.getId();
         String value = textField.getText();
         String allowedValues = "123456789";
 
-        // If the value in text box is not valid this if condition will run
+        // If the value in text box is not valid this if condition will run and give an alert
         if (!allowedValues.contains(value) || value.length()>1) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Alert");
@@ -142,11 +152,13 @@ public class GamePageController {
             // If the entered Value is valid
 
             if(HelloApplication.SetValue(textFieldName,intValue)){
+                // If answer is correct
                 textField.setStyle("-fx-text-fill: blue;");
                 score = score + 10;
                 scoreTxt.setText(String.valueOf(score));
                 if(HelloApplication.checkWinning())
                 {
+                    // Generates an alert that you win the game
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Result");
                     alert.setHeaderText("You Won");
@@ -160,6 +172,8 @@ public class GamePageController {
                 textField.setStyle("-fx-text-fill: red;");
                 lives = lives - 1;
                 livesTxt.setText(String.valueOf(lives));
+
+                // Losing Condition
                 if(lives == 0)
                 {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -173,7 +187,7 @@ public class GamePageController {
         }
     }
 
-    // This function will be called when click on Initialize Button. Its populates the maze
+    // This function will be called when click on Initialize Button. Its populates the maze with some value.
     public void InitilizedatainTextFields(ActionEvent actionEvent) {
         txt13.setText("5");
         HelloApplication.SetValue("txt13",5);

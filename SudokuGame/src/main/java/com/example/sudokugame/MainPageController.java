@@ -16,6 +16,7 @@ public class MainPageController {
     @FXML
     public Button Startbtn;
 
+    // On click of this start button the game page shows up
     @FXML
     protected void StartBtnClick(ActionEvent event) throws IOException
     {

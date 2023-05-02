@@ -7,8 +7,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+ //The application starts from this class.
 public class HelloApplication extends Application {
 
+
+    // Initializing Board and it will initialize 81 cells : Code in Constructor
     public static Board B = new Board();
     @Override
     public void start(Stage stage) throws IOException {
@@ -41,6 +44,8 @@ public class HelloApplication extends Application {
 
    }
 
+   // This function will return true if you won the game and false if some textboxes are left
+   // This function is called when user enters value in the cell/textbox
     public static boolean checkWinning()
     {
         if(B.checkWinningCondition())
